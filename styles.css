@@ -75,15 +75,19 @@ a { color: var(--ink); }
   font-size: 16px; min-height: 52px; padding: 0 28px;
   position: relative; overflow: hidden; isolation: isolate;
 }
-/* Chrome sheen: a soft diagonal light band sweeping on hover. */
+/* Chrome sheen: a soft diagonal light band with a slow ambient sweep. */
 .btn-primary::after {
   content: ""; position: absolute; inset: -40% -120%;
   background: linear-gradient(105deg, transparent 42%, rgb(10 10 10 / 14%) 50%, transparent 58%);
   transform: translateX(-60%);
   z-index: -1;
+  animation: sweep 5.5s ease-in-out infinite;
+}
+@keyframes sweep {
+  0% { transform: translateX(-60%); }
+  55%, 100% { transform: translateX(60%); }
 }
 .btn-primary:hover { background: rgb(255 255 255 / 92%); }
-.btn-primary:hover::after { transform: translateX(60%); transition: transform 650ms ease; }
 .btn-ghost { background: transparent; }
 
 /* ---------- Hero ---------- */
@@ -91,6 +95,20 @@ a { color: var(--ink); }
   display: grid; grid-template-columns: 1.05fr .95fr; gap: 64px;
   align-items: center;
   padding-top: 112px; padding-bottom: 96px;
+  position: relative; isolation: isolate;
+}
+/* Ambient aurora: two slow-drifting monochrome glows behind the hero. */
+.hero::before {
+  content: ""; position: absolute; inset: -60px -40px; z-index: -1;
+  background:
+    radial-gradient(440px 300px at 12% 28%, rgb(255 255 255 / 7%), transparent 70%),
+    radial-gradient(560px 340px at 88% 72%, rgb(255 255 255 / 5%), transparent 70%);
+  animation: drift 14s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+@keyframes drift {
+  from { transform: translate3d(-2%, -1%, 0) scale(1); }
+  to { transform: translate3d(2%, 2%, 0) scale(1.06); }
 }
 .eyebrow {
   font-size: 13px; font-weight: 500; letter-spacing: .08em;
@@ -102,12 +120,18 @@ h1 {
   font-weight: 500; margin: 0 0 24px;
   text-wrap: balance;
 }
-/* Serif moment with a subtle vertical chrome falloff. */
+/* Serif moment with a slow vertical light-play across the chrome. */
 .serif {
   font-family: var(--serif); font-style: italic; font-weight: 400;
-  background: linear-gradient(180deg, #fff 30%, rgb(255 255 255 / 58%));
+  background: linear-gradient(180deg, #fff 15%, rgb(255 255 255 / 52%) 50%, #fff 85%);
+  background-size: 100% 240%;
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent; color: transparent;
+  animation: shimmer 7s ease-in-out infinite;
+}
+@keyframes shimmer {
+  0%, 100% { background-position: 50% 0%; }
+  50% { background-position: 50% 100%; }
 }
 .lede { font-size: 18px; color: var(--ink-2); max-width: 34rem; margin: 0 0 36px; }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
@@ -288,6 +312,7 @@ footer { border-top: 1px solid var(--line); }
   .btn-primary::after { display: none; }
   .faq-a, .faq-a > p { transition: none; }
   .faq-a > p { opacity: 1; transform: none; }
+  .hero::before, .serif, .btn-primary::after { animation: none; }
 }
 
 /* ---------- Responsive ---------- */
