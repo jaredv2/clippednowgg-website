@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClippedNow.gg - Your best plays, clipped automatically</title>
+  <meta name="description" content="ClippedNow.gg auto-saves your BuildNow GG kills, deaths and wins as video clips. Free, no account, everything stays on your PC.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#install">Skip to install</a>
+
+  <header class="nav">
+    <div class="wrap nav-row">
+      <a class="brand" href="#top" aria-label="ClippedNow.gg home">
+        <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.6"/></svg>
+        <span>ClippedNow.gg</span>
+      </a>
+      <nav class="nav-links" aria-label="Page sections">
+        <a href="#features">Features</a>
+        <a href="#install">Install</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-small" href="https://mnpwvwjqawmuqmickteu.supabase.co/storage/v1/object/public/cdn/clippednow.latest.user.js" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 21h16"/></svg>
+        <span>Download</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow reveal">Free clipper for BuildNow GG</p>
+        <h1 class="reveal">Never miss <span class="serif">your moment</span> again.</h1>
+        <p class="lede reveal">ClippedNow.gg watches your match and saves your kills, deaths and wins as video clips - automatically. No account, no uploads, nothing leaves your PC.</p>
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary btn-chrome" href="https://mnpwvwjqawmuqmickteu.supabase.co/storage/v1/object/public/cdn/clippednow.latest.user.js" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 21h16"/></svg>
+            <span>Install ClippedNow - it's free</span>
+          </a>
+          <a class="btn btn-ghost" href="#install">How to install</a>
+        </div>
+        <p class="meta reveal">Version 1.3.8 &middot; Works in Chrome, Edge and Firefox &middot; Needs Violentmonkey or Tampermonkey</p>
+      </div>
+      <div class="hero-media reveal" aria-label="Preview of the ClippedNow panel">
+        <div class="mock">
+          <div class="mock-head">
+            <div class="mock-dot"></div>
+            <div>
+              <p class="mock-title">ClippedNow.gg</p>
+              <p class="mock-sub">REC 32/45s &middot; game audio on</p>
+            </div>
+          </div>
+          <div class="mock-clip">
+            <div class="mock-thumb">
+              <span class="mock-badge">Kill</span>
+              <span class="mock-play">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+            </div>
+            <div class="mock-row">
+              <p class="mock-name">websockets &rarr; StickyInvader</p>
+              <p class="mock-time">V-Arena &middot; 2.1 MB</p>
+            </div>
+          </div>
+          <div class="mock-clip">
+            <div class="mock-thumb mock-thumb-alt">
+              <span class="mock-badge mock-badge-win">Win</span>
+            </div>
+            <div class="mock-row">
+              <p class="mock-name">#1 Victory Royale</p>
+              <p class="mock-time">Zone Wars &middot; 3.4 MB</p>
+            </div>
+          </div>
+          <div class="mock-foot">
+            <span class="mock-btn">Clip now (F8)</span>
+            <span class="mock-btn mock-btn-dim">My clips (F9)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compatibility strip -->
+    <section class="strip" aria-label="Compatibility">
+      <div class="wrap strip-row reveal">
+        <span>Runs where you already play</span>
+        <ul>
+          <li>Violentmonkey</li>
+          <li>Tampermonkey</li>
+          <li>Chrome</li>
+          <li>Edge</li>
+          <li>Firefox</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Install -->
+    <section id="install" class="chapter wrap">
+      <p class="eyebrow reveal">Install</p>
+      <h2 class="reveal">Up and clipping <span class="serif">in two minutes.</span></h2>
+      <p class="chapter-lede reveal">Three steps, once. After that it just works every time you play.</p>
+      <ol class="steps">
+        <li class="card bevel reveal">
+          <span class="step-n">1</span>
+          <div>
+            <h3>Get a script manager</h3>
+            <p>Install <a href="https://violentmonkey.github.io/" rel="noopener">Violentmonkey</a> or <a href="https://www.tampermonkey.net/" rel="noopener">Tampermonkey</a> from your browser's store. It's a tiny, trusted extension that runs small helpers like this one.</p>
+          </div>
+        </li>
+        <li class="card bevel reveal">
+          <span class="step-n">2</span>
+          <div>
+            <h3>Install ClippedNow</h3>
+            <p>Hit the download button. Your script manager asks for one confirmation - accept it and you're done. Updates arrive on their own.</p>
+            <p><a class="btn btn-small" href="https://mnpwvwjqawmuqmickteu.supabase.co/storage/v1/object/public/cdn/clippednow.latest.user.js" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 21h16"/></svg>
+              <span>Download ClippedNow</span>
+            </a></p>
+          </div>
+        </li>
+        <li class="card bevel reveal">
+          <span class="step-n">3</span>
+          <div>
+            <h3>Just play</h3>
+            <p>Open BuildNow GG and play. Every kill, death and win is saved quietly in the background. Press <kbd>F8</kbd> any time to clip something yourself, <kbd>F9</kbd> to browse your clips.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="chapter wrap">
+      <p class="eyebrow reveal">Features</p>
+      <h2 class="reveal">Everything handled, <span class="serif">nothing to manage.</span></h2>
+      <p class="chapter-lede reveal">It records the last stretch of your match on a loop, then keeps the moments that matter.</p>
+      <div class="grid">
+        <article class="card bevel reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.6"/><circle cx="6" cy="18" r="2.6"/><path d="M8.2 7.8 20 19M8.2 16.2 20 5"/></svg>
+          <h3>Auto-clips your plays</h3>
+          <p>Your kills, your deaths and your wins are saved the second they happen. You never touch a record button.</p>
+        </article>
+        <article class="card bevel reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10v4h3l4 4V6l-4 4H4z"/><path d="M15 9a4 4 0 0 1 0 6"/><path d="M17.5 6.5a8 8 0 0 1 0 11"/></svg>
+          <h3>Game sound included</h3>
+          <p>Shots, builds, footsteps and win music land in the clip. Add your mic or a Discord feed on top if you want.</p>
+        </article>
+        <article class="card bevel reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          <h3>Full-length buffer</h3>
+          <p>Set up to 60 seconds of rewind. A kill at any point still gives you the whole play, start to finish.</p>
+        </article>
+        <article class="card bevel reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="3" width="8" height="18" rx="2"/><path d="M11 18h2"/></svg>
+          <h3>Vertical for Shorts</h3>
+          <p>One switch crops clips to 9:16, ready to post on TikTok, Shorts or Reels. No editor needed.</p>
+        </article>
+        <article class="card bevel reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M6 20V10l6-6 6 6v10"/><path d="M10 20v-5h4v5"/></svg>
+          <h3>Your watermark</h3>
+          <p>Stamp clips with your name, the game mode, or nothing at all. Six corners and centers to choose from.</p>
+        </article>
+        <article class="card bevel reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h10M18 8h2M4 16h4M12 16h8"/><circle cx="16" cy="8" r="2.2"/><circle cx="10" cy="16" r="2.2"/></svg>
+          <h3>Quality presets</h3>
+          <p>Low-end PC, balanced, Discord-ready or max quality. Pick one and the settings tune themselves.</p>
+        </article>
+        <article class="card bevel reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H8l-4 4V5z"/><path d="M8 9h8M8 12.5h5"/></svg>
+          <h3>A library, not a folder</h3>
+          <p>Clips live in a searchable in-game library. Type a name to find who you eliminated, star favorites, download the keepers.</p>
+        </article>
+        <article class="card bevel reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="11" rx="2"/><path d="M7 11h.01M11 11h.01M15 11h.01M7 14.5h10"/></svg>
+          <h3>Three keys to learn</h3>
+          <p>Clip, panel, library — each on its own remappable key. The defaults are F8, F4 and F9.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Privacy -->
+    <section id="privacy" class="chapter wrap">
+      <div class="split">
+        <div>
+          <p class="eyebrow reveal">Privacy</p>
+          <h2 class="reveal">Your clips <span class="serif">never leave your PC.</span></h2>
+          <p class="chapter-lede reveal">No account. No sign-up. No uploads, no tracking, no servers. Recording, detection and storage all happen locally in your browser — deleting a clip truly deletes it.</p>
+        </div>
+        <ul class="ticks">
+          <li class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg><span>No account, ever</span></li>
+          <li class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg><span>Clips stored in your browser</span></li>
+          <li class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg><span>Free, including updates</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="chapter wrap">
+      <p class="eyebrow reveal">Questions</p>
+      <h2 class="reveal">Asked <span class="serif">often.</span></h2>
+      <div class="faq">
+        <details class="card bevel reveal">
+          <summary>Is it really free?</summary>
+          <p>Yes. Download it, use it, keep it updated — all free, no account and no locked features.</p>
+        </details>
+        <details class="card bevel reveal">
+          <summary>Will it slow down my game?</summary>
+          <p>On most PCs you won't feel it. If your game stutters, pick the Low-end PC preset: it drops the recording load while the game stays smooth.</p>
+        </details>
+        <details class="card bevel reveal">
+          <summary>Where do my clips live?</summary>
+          <p>In your browser, on your PC. Open them with F9 any time, download the ones you want to keep, delete the rest.</p>
+        </details>
+        <details class="card bevel reveal">
+          <summary>My clip has no sound. What now?</summary>
+          <p>Make sure Game audio is ticked in the panel and your game isn't muted. If you want your voice too, tick Mic and allow the browser to use your microphone.</p>
+        </details>
+        <details class="card bevel reveal">
+          <summary>Can it record my Discord call?</summary>
+          <p>Not directly — browsers can't hear other apps or tabs. The workaround: route Discord through a free virtual cable like VoiceMeeter, then pick that cable as the mic input in the panel.</p>
+        </details>
+        <details class="card bevel reveal">
+          <summary>Which browsers work?</summary>
+          <p>Chrome, Edge and Firefox, with the Violentmonkey or Tampermonkey extension installed.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Closing -->
+    <section class="chapter wrap closing">
+      <h2 class="reveal">Your next best play <span class="serif">deserves a replay.</span></h2>
+      <p class="chapter-lede reveal">Two minutes to install. Every play after that, saved.</p>
+      <p class="reveal"><a class="btn btn-primary btn-chrome" href="https://mnpwvwjqawmuqmickteu.supabase.co/storage/v1/object/public/cdn/clippednow.latest.user.js" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 21h16"/></svg>
+        <span>Install ClippedNow - it's free</span>
+      </a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot-row">
+      <p>ClippedNow.gg &middot; made with love by @cisled</p>
+      <p>Free forever &middot; your clips never leave your PC</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
