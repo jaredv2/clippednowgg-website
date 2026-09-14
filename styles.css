@@ -128,26 +128,30 @@ h1 {
 .mock-title { margin: 0; font-size: 15px; font-weight: 500; }
 .mock-sub { margin: 2px 0 0; font-size: 12px; color: var(--ink-3); }
 .mock-clip { border-top: 1px solid var(--line); padding-top: 14px; }
-.mock-thumb {
-  position: relative; aspect-ratio: 16/9; border-radius: 8px;
-  background: linear-gradient(135deg, #2b3a55 0%, #141b2c 60%, #0d0f16 100%);
-  border: 1px solid var(--line);
-  display: block;
+/* Real clip footage: first frame shows via preload, click to preview. */
+.mock-vidwrap { position: relative; }
+.mock-vid {
+  display: block; width: 100%; aspect-ratio: 16/9; object-fit: cover;
+  border-radius: 8px; border: 1px solid var(--line); background: #000;
+  cursor: pointer;
 }
-.mock-thumb-alt { background: linear-gradient(135deg, #3d2f5a 0%, #1a1530 60%, #0d0c16 100%); }
-.mock-badge {
-  position: absolute; top: 8px; left: 8px;
-  font-size: 10px; font-weight: 500; letter-spacing: .06em;
-  background: #ef4444; color: #fff; border-radius: 4px; padding: 2px 7px;
-}
-.mock-badge-win { background: #10b981; }
 .mock-play {
   position: absolute; inset: 0; margin: auto;
   width: 44px; height: 44px; border-radius: 50%;
   background: rgb(10 10 10 / 55%);
   border: 1px solid rgb(255 255 255 / 22%);
   display: flex; align-items: center; justify-content: center;
+  cursor: pointer; padding: 0;
+  transition: opacity 180ms ease-out, transform 160ms ease-out;
 }
+.mock-play:hover { transform: scale(1.06); }
+.mock-vidwrap.playing .mock-play { opacity: 0; pointer-events: none; }
+.mock-badge {
+  position: absolute; top: 8px; left: 8px;
+  font-size: 10px; font-weight: 500; letter-spacing: .06em;
+  background: #ef4444; color: #fff; border-radius: 4px; padding: 2px 7px;
+}
+.mock-badge-win { background: #10b981; }
 .mock-play svg { width: 18px; height: 18px; color: #fff; margin-left: 2px; }
 .mock-row { display: flex; justify-content: space-between; gap: 12px; margin-top: 8px; }
 .mock-name { margin: 0; font-size: 13px; font-weight: 500; }
@@ -241,7 +245,18 @@ kbd {
   transition: transform 200ms ease-out;
 }
 .faq details[open] summary::after { transform: rotate(45deg); }
-.faq details p { margin: 0; padding: 0 24px 22px; color: var(--ink-2); font-size: 16px; max-width: 60ch; }
+/* Animated answer: grid-rows trick (auto height can't transition directly),
+   plus a short fade-and-rise on the copy. */
+.faq-a { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 260ms ease-out; }
+.faq-a > p {
+  overflow: hidden; min-height: 0;
+  margin: 0; padding: 0 24px 22px;
+  color: var(--ink-2); font-size: 16px; max-width: 60ch;
+  opacity: 0; transform: translateY(-6px);
+  transition: opacity 200ms ease-out, transform 260ms ease-out;
+}
+.faq details[open] .faq-a { grid-template-rows: 1fr; }
+.faq details[open] .faq-a > p { opacity: 1; transform: none; }
 
 /* Closing + footer */
 .closing { padding-bottom: 144px; }
@@ -271,6 +286,8 @@ footer { border-top: 1px solid var(--line); }
   .btn, .btn-primary:hover::after, .faq summary::after { transition: none; }
   .btn:active { transform: none; }
   .btn-primary::after { display: none; }
+  .faq-a, .faq-a > p { transition: none; }
+  .faq-a > p { opacity: 1; transform: none; }
 }
 
 /* ---------- Responsive ---------- */

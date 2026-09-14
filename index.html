@@ -6,6 +6,7 @@
   <title>ClippedNow.gg - Your best plays, clipped automatically</title>
   <meta name="description" content="ClippedNow.gg auto-saves your BuildNow GG kills, deaths and wins as video clips. Free, no account, everything stays on your PC.">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
   <a class="skip" href="#install">Skip to install</a>
@@ -13,7 +14,7 @@
   <header class="nav">
     <div class="wrap nav-row">
       <a class="brand" href="#top" aria-label="ClippedNow.gg home">
-        <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.6"/></svg>
+        <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.2" fill="#EF4444" stroke="none"/></svg>
         <span>ClippedNow.gg</span>
       </a>
       <nav class="nav-links" aria-label="Page sections">
@@ -55,24 +56,29 @@
             </div>
           </div>
           <div class="mock-clip">
-            <div class="mock-thumb">
+            <div class="mock-vidwrap">
+              <video class="mock-vid" muted loop playsinline preload="metadata" src="https://mnpwvwjqawmuqmickteu.supabase.co/storage/v1/object/public/assets/clippednow-kill-1789381612474.mp4"></video>
               <span class="mock-badge">Kill</span>
-              <span class="mock-play">
+              <button class="mock-play" type="button" aria-label="Play clip preview">
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-              </span>
+              </button>
             </div>
             <div class="mock-row">
-              <p class="mock-name">websockets &rarr; StickyInvader</p>
+              <p class="mock-name">cis6led &rarr; StickyInvader</p>
               <p class="mock-time">V-Arena &middot; 2.1 MB</p>
             </div>
           </div>
           <div class="mock-clip">
-            <div class="mock-thumb mock-thumb-alt">
+            <div class="mock-vidwrap">
+              <video class="mock-vid" muted loop playsinline preload="metadata" src="https://mnpwvwjqawmuqmickteu.supabase.co/storage/v1/object/public/assets/clippednow-kill-1789397787149.mp4"></video>
               <span class="mock-badge mock-badge-win">Win</span>
+              <button class="mock-play" type="button" aria-label="Play clip preview">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </button>
             </div>
             <div class="mock-row">
               <p class="mock-name">#1 Victory Royale</p>
-              <p class="mock-time">Zone Wars &middot; 3.4 MB</p>
+              <p class="mock-time">Lategame Zonewars &middot; 3.4 MB</p>
             </div>
           </div>
           <div class="mock-foot">
@@ -203,27 +209,27 @@
       <div class="faq">
         <details class="card bevel reveal">
           <summary>Is it really free?</summary>
-          <p>Yes. Download it, use it, keep it updated — all free, no account and no locked features.</p>
+          <div class="faq-a"><p>Yes. Download it, use it, keep it updated — all free, no account and no locked features.</p></div>
         </details>
         <details class="card bevel reveal">
           <summary>Will it slow down my game?</summary>
-          <p>On most PCs you won't feel it. If your game stutters, pick the Low-end PC preset: it drops the recording load while the game stays smooth.</p>
+          <div class="faq-a"><p>On most PCs you won't feel it. If your game stutters, pick the Low-end PC preset: it drops the recording load while the game stays smooth.</p></div>
         </details>
         <details class="card bevel reveal">
           <summary>Where do my clips live?</summary>
-          <p>In your browser, on your PC. Open them with F9 any time, download the ones you want to keep, delete the rest.</p>
+          <div class="faq-a"><p>In your browser, on your PC. Open them with F9 any time, download the ones you want to keep, delete the rest.</p></div>
         </details>
         <details class="card bevel reveal">
           <summary>My clip has no sound. What now?</summary>
-          <p>Make sure Game audio is ticked in the panel and your game isn't muted. If you want your voice too, tick Mic and allow the browser to use your microphone.</p>
+          <div class="faq-a"><p>Make sure Game audio is ticked in the panel and your game isn't muted. If you want your voice too, tick Mic and allow the browser to use your microphone.</p></div>
         </details>
         <details class="card bevel reveal">
           <summary>Can it record my Discord call?</summary>
-          <p>Not directly — browsers can't hear other apps or tabs. The workaround: route Discord through a free virtual cable like VoiceMeeter, then pick that cable as the mic input in the panel.</p>
+          <div class="faq-a"><p>Not directly — browsers can't hear other apps or tabs. The workaround: route Discord through a free virtual cable like VoiceMeeter, then pick that cable as the mic input in the panel.</p></div>
         </details>
         <details class="card bevel reveal">
           <summary>Which browsers work?</summary>
-          <p>Chrome, Edge and Firefox, with the Violentmonkey or Tampermonkey extension installed.</p>
+          <div class="faq-a"><p>Chrome, Edge and Firefox, with the Violentmonkey or Tampermonkey extension installed.</p></div>
         </details>
       </div>
     </section>
